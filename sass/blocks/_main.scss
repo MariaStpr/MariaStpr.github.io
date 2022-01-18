@@ -1,0 +1,42 @@
+.main {
+    position: relative;
+    background: url('../img/main_bg.jpg') no-repeat 50% / cover;
+    min-height: 100vh;
+    padding: 190px 15px;
+    &__intro {
+        max-width: 532px;
+    }
+    .intro-main {
+        &__info {
+            position: relative;
+            padding-left: 10px;
+            z-index: 2;
+            @include before_circle;
+        }
+        &__title {
+            margin-top: 16px;
+        }
+        &__btns {
+            margin-top: 21px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 288px;
+            a {
+                text-decoration: none;
+                color: #fff;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 150%;
+                color: #FFFFFF;
+            }
+        }
+        &__link {
+            transition: color 0.3s ease;
+            &:hover {
+                color: $main_color;
+                opacity: 1;
+            }
+        }
+    }
+}

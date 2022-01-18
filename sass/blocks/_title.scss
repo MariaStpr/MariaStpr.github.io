@@ -1,0 +1,18 @@
+.subtitle {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    &_main {
+        font-size: 24px;
+        color: #FFFFFF;
+    }
+}
+.title {
+    font-weight: bold;
+    font-size: 36px;
+    &_main {
+        line-height: 130%;
+        color: #FFFFFF;
+        font-size: 46px;
+    }
+}
