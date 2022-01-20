@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+h1 {
+	color: red;
+	margin: 20px 0;
+}
+
+h2 {
+	background-color: green;
+	color: #fff;
+	padding: 5px;
+}
+
+.homework {
+	background-color: blue;
+	color: #fff;
+	width: 100px;
+	margin: 15px 0 115px 0;
+}
+
+.logo {
+	width: 150px;
+}
+
+span {
+	color: red;
+}
+
+.skills {
+	padding: 45px;
+}
+
+.form {
+	padding: 0 100px;
+}
+
+.do_list {
+	margin-bottom: 25px;
+}
+
+.list li {
+	border: 1px solid #000;
+	font-size: 20px;
+}
+
+footer {
+	margin-bottom: 50px;
+}
