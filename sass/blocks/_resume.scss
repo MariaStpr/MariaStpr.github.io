@@ -1,0 +1,118 @@
+.resume {
+    padding-top: 120px;
+    &__subtitle {
+        position: relative;
+        text-align: center;
+        @include before_circle_main;
+        &:before {
+            left: 50%;
+            top: -6px;
+            transform: translateX(-50%);
+        }
+    }
+    &__title {
+        text-align: center;
+        &::after {
+            content:'';
+            position: absolute;
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: $main_color;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__wrapper {
+        margin-top: 60px;
+        padding: 0 65px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        column-gap: 135px;
+    }
+    &__item {
+        padding-bottom: 25px;
+        padding-top: 45px;
+        position: relative;
+        &::before {
+            content: '';
+            width: 42px;
+            height: 1px;
+            position: absolute;
+            top: 61px;;
+            background-color: #000;
+            display: block;
+        }
+        &-head {
+            padding-left: 42px;
+            display: flex;
+            justify-content: flex-start;
+        }
+        &-icon {
+            position: relative;
+            padding: 14px 0 0 17px;
+            margin-right: 17px;
+            @include before_circle_main;
+            &:before {
+                left: 0;
+                top: 0;
+            }
+        }
+        &-sub {
+            font-size: 12px;
+            line-height: 150%;
+        }
+        &-body {
+            padding-left: 42px;
+            padding-top: 15px;
+            font-size: 14px;
+            line-height: 150%;
+        }
+    }
+    .resume-edu {
+        &__title {
+            padding-left: 35px;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 15px;
+                height: 15px;
+                background-color: $main_color;
+                border-radius: 50%;
+                left: -7px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        ul {
+            list-style-type: none;
+            li {
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: -16px;
+                    left: 0;
+                    width: 1px;
+                    height: 100%;
+                    background-color: #000;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .resume {
+        padding-top: 50px;
+    }
+}
+@media (max-width: 575px) {
+    .resume {
+        &__wrapper {
+            padding: 0 25px;
+        }
+    }    
+}

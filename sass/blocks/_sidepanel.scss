@@ -11,7 +11,7 @@
     &__divider {
         height: 70px;
         width: 2px;
-        background-color: #fff;
+        background-color: #000;
     }
     &__text {
         height: 150px;
@@ -20,31 +20,47 @@
             transform: rotate(-90deg) translate(-30%, -260%);
             display: block;
             width: 150px;
-            color: #fff;
+            color: #000;
         }
     }
     .icon-telegram {
         text-decoration: none;
         transform: rotate(-90deg);
+        font-size: 20px;
+        
         &::before {
             content: "\e903";
-            color: #fff;
+            color: #000;
+            transition: color 0.3s ease;
+        }
+        &:hover::before {
+            color: $main_color;
         }
     }
     .icon-instagram {
         text-decoration: none;
         transform: rotate(-90deg);
+        font-size: 20px;
         &::before {
             content: "\e902";
-            color: #fff;
+            color: #000;
+            transition: color 0.3s ease;
+        }
+        &:hover::before {
+            color: $main_color;
         }
     }
     .icon-github {
         text-decoration: none;
         transform: rotate(-90deg);
+        font-size: 20px;
         &::before {
             content: "\e901";
-            color: #fff;
+            color: #000;
+            transition: color 0.3s ease;
+        }
+        &:hover::before {
+            color: $main_color;
         }
     }
 }

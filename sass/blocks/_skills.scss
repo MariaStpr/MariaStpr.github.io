@@ -1,0 +1,119 @@
+.skills {
+    padding-top: 60px;
+    &__subtitle {
+        position: relative;
+        text-align: center;
+        @include before_circle_main;
+        &:before {
+            left: 50%;
+            top: -6px;
+            transform: translateX(-50%);
+        }
+    }
+    &__title {
+        text-align: center;
+        &::after {
+            content:'';
+            position: absolute;
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: $main_color;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__wrapper {
+        margin-top: 62px;
+        padding: 0 134px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(270px, auto));
+        grid-auto-rows: repeat(auto-fit, minmax(270px, auto));
+        gap: 30px;
+    }
+    &__items {
+        border: 1px solid #000000;
+        background-color: #fff;
+        border-radius: 10px;
+        transition: box-shadow 0.5s ease;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.6);
+        }
+    }
+    &__item {
+        padding: 30px 30px 25px 30px;
+        &-img {
+            max-width: 65px;
+            img {
+                width: 100%;
+            }
+        }
+        &-name {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 150%;
+            margin-top: 20px;            
+        }
+        &-text {
+            font-size: 12px;
+            line-height: 150%;
+            margin-top: 15px;
+        }
+    }
+    &__percent {
+        padding: 0 15px;
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(70px, auto));
+        grid-auto-rows: repeat(auto-fit, minmax(70px, auto));
+        column-gap: 45px;
+        row-gap: 30px;
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-name {
+            position: relative;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 150%;
+            padding-left: 13px;
+            @include before_circle_main;
+        }
+        &-sum {
+            font-size: 14px;
+            line-height: 150%;
+        }
+        &-line {
+            width: 100%;
+            margin-top: 27px;
+            height: 14px;
+            background: #E8E4DE;
+            border-radius: 4px;
+            position: relative;
+            width: 100%;
+            span {
+                height: 14px;
+                background: $main_color;
+                border-radius: 4px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 576px) {
+    .skills {
+        &__wrapper {
+            padding: 0 15px;
+        }
+    }
+}

@@ -10,12 +10,22 @@
     padding: 0;
 }
 
+body {
+    background-color: $bg_color;
+}
+
 .container {
     max-width: 1140px;
     margin: 0 auto;
 }
 
+@import "blocks/header";
 @import "blocks/buttons";
 @import "blocks/title";
 @import "blocks/main";
 @import "blocks/sidepanel";
+@import "blocks/about";
+@import "blocks/resume";
+@import "blocks/skills";
+@import "blocks/works";
+@import "blocks/price";

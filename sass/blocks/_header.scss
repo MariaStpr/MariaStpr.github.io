@@ -1,0 +1,200 @@
+.header {
+    min-height: 50px;
+    position: absolute;
+    z-index: 3;
+    height: 50px;
+    top: 0;
+    width: 100%;
+    &__items {
+        list-style-type: none;
+        margin-bottom: 0;
+        padding: 0 15px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        min-height: 70px;
+    }
+    &__item {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 36px;
+        a {
+            text-decoration: none;
+            color: #fff;
+            position: relative;
+            &:after {
+                display: block;
+                position: absolute;
+                left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+                width: 0;/*задаём длинну линии до наведения курсора*/
+                height: 2px; /*задаём ширину линии*/
+                background-color: $main_color;
+                content: "";
+                transition: width 0.5s ease-out; /*задаём время анимации*/
+            }
+            &:hover:after,
+            &:focus:after {
+                width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+            }
+        }
+    }
+    &__social {
+        display: none;
+    }
+    .humburger {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        &__list {
+            position: fixed;
+            top: -150%;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            padding: 20px 15px;
+            background-color: rgb(255, 243, 243, 0.9);
+            transition: 0.6s all;
+            z-index: 6;
+            &_active {
+                top: 0;
+                overflow: auto;
+            }
+        }
+        &__items {
+            flex-direction: column;
+            width: 211px;
+            align-items: flex-start;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-25%, -50%);
+            gap: 10px;
+        }
+        &__item {
+            position: relative;
+            font-size: 20px;
+            a {
+                color: #000;
+                &:hover {
+                    color: $main_color;
+                }
+                &::after {
+                    display: none;
+                }
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                left: -35px;
+                top: 9px;
+                width: 15px;
+                height: 15px;
+                border: 1px solid #000000;
+                border-radius: 50%;
+                transition: all 0.5s ease;
+                cursor: pointer;
+            }
+            &:hover {
+                &::before {
+                    background-color: $main_color;
+                }
+            }
+        }
+        &__social {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            height: 170px;
+            justify-content: space-between;
+            align-items: center;
+            top: 50%;
+            left: 30px;
+            transform: translateY(-50%);
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+            .icon-telegram {
+                font-size: 30px;
+                &::before {
+                    content: "\e903";
+                    color: #000;
+                }
+            }
+            .icon-instagram {
+                font-size: 30px;
+                &::before {
+                    content: "\e902";
+                    color: #000;
+                }
+            }
+            .icon-github {
+                font-size: 30px;
+                &::before {
+                    content: "\e901";
+                    color: #000;
+                }
+            }
+            .icon-viber {
+                font-size: 30px;
+                &::before {
+                    content: "\e904";
+                    color: #000;
+                }
+            }
+        }
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            position: fixed;
+            right: 30px;
+            top: 30px;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 21px;
+            z-index: 10;
+            cursor: pointer;
+            span {
+                display: block;
+                height: 3px;
+                width: 100%;
+                background-color: $main_color;
+                transition: 0.5s all;
+            }
+            span.long {
+                width: 120%;
+            }
+            &_active {
+                span {
+                    margin-bottom: -2px;
+                    background-color: #000;
+                    &:nth-child(1){
+                        transform: translateY(23px) rotate(-45deg);
+                    }
+                    &:nth-child(2) {
+                        display: none;
+                    }
+                    &:nth-child(3) {
+                        transform: translateY(3px) rotate(45deg); 
+                    }
+                }
+            }
+        }  
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        &__items {
+            gap: 10px;
+        }
+    }
+}

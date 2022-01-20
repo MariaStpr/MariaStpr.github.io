@@ -1,6 +1,6 @@
 .main {
     position: relative;
-    background: url('../img/main_bg.jpg') no-repeat 50% / cover;
+    background: url('../img/main_bg.jpeg') no-repeat 50% / cover;
     min-height: 100vh;
     padding: 190px 15px;
     &__intro {
@@ -28,7 +28,7 @@
                 font-weight: bold;
                 font-size: 16px;
                 line-height: 150%;
-                color: #FFFFFF;
+                color: #000;
             }
         }
         &__link {
@@ -39,4 +39,16 @@
             }
         }
     }
+}
+
+@media (max-width: 576px) {
+    .main {
+        .intro-main__btns {
+            width: 270px;
+            a {
+                color: #fff;
+            }
+        }
+        
+    }    
 }
