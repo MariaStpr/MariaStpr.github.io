@@ -8,8 +8,13 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     transition: box-shadow 0.3s ease;
+    color: #fff;
     cursor: pointer;
     &:hover {
         box-shadow: 3px 3px 20px rgba(255, 101, 101, 1);
+    }
+    &_form {
+        width: 219px;
+        border: none;
     }
 }

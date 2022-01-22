@@ -6,7 +6,7 @@
         @include before_circle_main;
         &:before {
             left: 50%;
-            top: -6px;
+            top: -5px;
             transform: translateX(-50%);
         }
     }
@@ -83,6 +83,9 @@
             line-height: 150%;
             padding-left: 13px;
             @include before_circle_main;
+            &:before {
+                top: -8px;
+            }
         }
         &-sum {
             font-size: 14px;
