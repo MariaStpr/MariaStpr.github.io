@@ -26,4 +26,32 @@
                 console.log('Error');
             }
         });
-    
+
+
+
+        // let header = document.querySelector('.header');
+
+        // document.addEventListener('scroll', function() {
+        //   if (window.pageYOffset >= 600) {
+        //     header.classList.add('header__opa');
+        
+        //   } else {
+        //     header.classList.remove('header__opa');
+        
+        //   }
+        // });
+
+        window.addEventListener('scroll', function(e) {
+            const
+              oldScroll = this.oldScroll || 0,
+              newScroll = this.scrollY,
+              isScrollDown = newScroll < oldScroll;
+          
+            document.querySelector('.header').classList.toggle('header__scroll-up', isScrollDown);
+          
+            this.oldScroll = newScroll;
+
+            if (newScroll == 0) {
+                document.querySelector('.header').classList.remove('header__scroll-up', isScrollDown);
+            }
+          });
