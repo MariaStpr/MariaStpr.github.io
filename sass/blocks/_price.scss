@@ -1,5 +1,5 @@
 .price {
-    padding-top: 60px;
+    padding-top: 70px;
     &__subtitle {
         position: relative;
         text-align: center;
@@ -28,8 +28,8 @@
         padding: 0 15px;
         margin-top: 60px;
         display: grid;
-        grid-template-columns: repeat(2, minmax(290px, 366px));
-        grid-template-rows: repeat(auto-fit, 44px);
+        grid-template: repeat(2, minmax(45px, auto)) / repeat(2, 365px);
+        grid-auto-rows: minmax(45px, auto);
         justify-content: space-between;
         row-gap: 15px;
     }
@@ -70,12 +70,3 @@
         }
     }
 }
-
-// @media (max-width: 785px) {
-//     .price {
-//         &__wrapper {
-//             grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-//             column-gap: 20px;
-//         }
-//     }    
-// }
