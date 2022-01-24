@@ -71,11 +71,11 @@
     }
 }
 
-@media (max-width: 785px) {
-    .price {
-        &__wrapper {
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-            column-gap: 20px;
-        }
-    }    
-}
+// @media (max-width: 785px) {
+//     .price {
+//         &__wrapper {
+//             grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+//             column-gap: 20px;
+//         }
+//     }    
+// }

@@ -12,7 +12,7 @@
     font-size: 36px;
     color: #000000;
     &_main {
-        line-height: 130%;
+        line-height: 150%;
         font-size: 46px;
     }
     &_sub {
@@ -25,20 +25,3 @@
     }
 }
 
-@media (max-width: 576px) {
-    .subtitle {
-        &_main {
-            color: #fff;
-            font-size: 20px;
-        }
-    }
-    .title {
-        &_main {
-            color: #fff;
-            font-size: 32px;
-        }
-        &_blocks {
-            font-size: 32px;
-        }
-    }
-}

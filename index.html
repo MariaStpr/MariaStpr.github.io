@@ -102,7 +102,12 @@
         <div class="container">
             <div class="about__wrapper">
                 <div class="about__img">
-                    <img src="img/main_photo.jpg" alt="" class="about__me">
+                    <!-- <img src="img/main_photo.jpg" alt="" class="about__me"> -->
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="img/me.jpg">
+                        <source media="(min-width: 577px)" srcset="img/main_photo.jpg">
+                        <img src="img/main_photo.jpg" alt="">
+                    </picture>
                 </div>
                 <div class="about__desc">
                     <h2 class="about__subtitle subtitle">
@@ -130,7 +135,7 @@
                                 Окончила курс “web-разработчик 2021”. HTML, CSS, Sass, Scss, адаптивная верстка, Flexbox, Grid.
                             </div>
                         </div>
-                    </div>       
+                    </div>
                 </div>
             </div>
         </div>
@@ -229,7 +234,7 @@
             <div class="skills__subtitle subtitle">
                 Навыки
             </div>
-            <h2 class="skills__title title title__blocks">
+            <h2 class="skills__title title title_blocks">
                 Что я использую в работе
             </h2>
             <div class="skills__wrapper">
@@ -381,7 +386,7 @@
             </div>
         </div>
     </section>
-    <section class="work">
+    <!-- <section class="work">
         <div class="container">
             <div class="work__subtitle subtitle">
                 Портфолио
@@ -404,8 +409,8 @@
                 </a>
             </div>
         </div>
-    </section>
-    <section class="price">
+    </section> -->
+    <!-- <section class="price">
         <div class="container">
             <div class="price__subtitle subtitle">
                 Прайс-лист
@@ -451,32 +456,6 @@
                         Сайт для вашего бизнеса или компании
                     </div>
                 </div>
-                <!-- <div class="price__item">
-                    <div class="price__item-header">
-                        <div class="price__item-name">
-                            Посадка весртки на CMS
-                        </div>
-                        <div class="price__item-sum">
-                            от 10000 руб.
-                        </div>
-                    </div>
-                    <div class="price__item-body">
-                        Работа с Wordpress
-                    </div>
-                </div> -->
-                <!-- <div class="price__item">
-                    <div class="price__item-header">
-                        <div class="price__item-name">
-                            Интернет-магазин
-                        </div>
-                        <div class="price__item-sum">
-                            от 30000 руб.
-                        </div>
-                    </div>
-                    <div class="price__item-body">
-                        Инструмент для ваших продаж в сети
-                    </div>
-                </div> -->
                 <div class="price__item">
                     <div class="price__item-header">
                         <div class="price__item-name">
@@ -492,12 +471,16 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="contact">
+    </section> -->
+    <!-- <section class="contact">
         <div class="container">
             <div class="contact__wrapper">
                 <div class="contact__img">
-                    <img src="img/main_photo.jpg" alt="">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="img/me.jpg">
+                        <source media="(min-width: 577px)" srcset="img/main_photo.jpg">
+                        <img src="img/main_photo.jpg" alt="">
+                    </picture>
                 </div>
                 <div class="contact__desc">
                     <div class="contact__desc-subtitle subtitle">
@@ -545,8 +528,8 @@
                 </div>
             </div>
         </div>
-    </section>
-    <div class="overlay">
+    </section> -->
+    <!-- <div class="overlay">
         <div class="modal modal__thanks" id="modal__thanks">
             <div class="modal__close">
                 &times;
@@ -568,7 +551,7 @@
             <div class="modal__desc">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

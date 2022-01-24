@@ -27,9 +27,8 @@
         margin-top: 62px;
         padding: 0 134px;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-        grid-template-rows: repeat(auto-fit, minmax(270px, auto));
-        grid-auto-rows: repeat(auto-fit, minmax(270px, auto));
+        grid-template: repeat(2, minmax(270px, auto)) / repeat(3, 270px);
+        grid-auto-rows: minmax(270px, auto);
         gap: 30px;
     }
     &__items {
@@ -110,13 +109,5 @@
             }
         }
         
-    }
-}
-
-@media (max-width: 576px) {
-    .skills {
-        &__wrapper {
-            padding: 0 15px;
-        }
     }
 }

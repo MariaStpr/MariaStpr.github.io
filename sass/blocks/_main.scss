@@ -1,6 +1,6 @@
 .main {
     position: relative;
-    background: url('../img/main_bg.jpeg') no-repeat 50% / cover;
+    background: url('../img/main_bg.jpeg') no-repeat center center / cover;
     min-height: 100vh;
     padding: 190px 15px;
     &__intro {
@@ -40,14 +40,14 @@
     }
 }
 
-@media (max-width: 576px) {
-    .main {
-        .intro-main__btns {
-            width: 270px;
-            a {
-                color: #fff;
-            }
-        }
+// @media (max-width: 576px) {
+//     .main {
+//         .intro-main__btns {
+//             width: 270px;
+//             a {
+//                 color: #fff;
+//             }
+//         }
         
-    }    
-}
+//     }    
+// }
