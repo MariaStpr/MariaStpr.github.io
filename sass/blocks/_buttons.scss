@@ -16,5 +16,8 @@
     &_form {
         width: 219px;
         border: none;
+        &:active {
+            border: none;
+        }
     }
 }

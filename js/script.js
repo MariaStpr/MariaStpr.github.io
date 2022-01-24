@@ -1,6 +1,88 @@
-    const menu = document.querySelector('.header__list'),
-          menuItem = document.querySelectorAll('.header__item'),
-          hamburger = document.querySelector('.hamburger');
+'use strict';
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form');
+    const overlay = document.querySelector('.overlay'),
+         modalThanks = overlay.querySelector('.modal__thanks'),
+         modalError = overlay.querySelector('.modal__error'),
+         modalClose = overlay.querySelectorAll('.modal__close');
+          
+    form.addEventListener('submit', formSend);
+
+    async function formSend(e) {
+        e.preventDefault();
+
+        let error = formValidate(form);
+
+        if (error === 0) {
+            overlay.classList.add('overlay_active');
+            modalThanks.classList.add('modal_active');
+            modalError.classList.add('modal_hidden');
+
+        } else {
+            overlay.classList.add('overlay_active');
+            modalError.classList.add('modal_active');
+            modalThanks.classList.add('modal_hidden');            
+        }
+
+        modalClose.forEach(item => {
+            item.addEventListener('click', () => {
+                overlay.classList.remove('overlay_active');
+                modalThanks.classList.remove('modal_hidden');
+                modalError.classList.remove('modal_active');
+                modalThanks.classList.remove('modal_active');
+                modalError.classList.remove('modal_hidden');
+            });
+        });
+
+    }
+
+    function formValidate(form) {
+        let error = 0;
+        let formReq = document.querySelectorAll('._req');
+
+        for (let index = 0; index < formReq.length; index++) {
+            const input = formReq[index];
+            formRemoveError(input);
+
+            if (input.classList.contains('_email')) {
+                if (emailTest(input)) {
+                    formAddError(input);
+                    error++;
+                }
+            } else if (input.getAttribute("type") === "checkbox" && input.checked === false) {
+                formAddError(input);
+                error++;
+            } else {
+                if (input.value === '') {
+                    formAddError(input);
+                    error++;
+                }
+            }
+        }
+        return error;
+    }
+
+    function formAddError(input) {
+        input.parentElement.classList.add('_error');
+        input.classList.add('_error');
+    }
+    function formRemoveError(input) {
+        input.parentElement.classList.remove('_error');
+        input.classList.remove('_error');
+    }
+
+    //Функция теста email
+    function emailTest(input) {
+        return !/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.test(input.value);
+    }
+
+    
+});
+
+const menu = document.querySelector('.header__list'),
+        menuItem = document.querySelectorAll('.header__item'),
+        hamburger = document.querySelector('.hamburger');
 
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('hamburger_active');
@@ -27,31 +109,17 @@
             }
         });
 
-
-
-        // let header = document.querySelector('.header');
-
-        // document.addEventListener('scroll', function() {
-        //   if (window.pageYOffset >= 600) {
-        //     header.classList.add('header__opa');
+    window.addEventListener('scroll', function(e) {
+        const
+            oldScroll = this.oldScroll || 0,
+            newScroll = this.scrollY,
+            isScrollDown = newScroll < oldScroll;
         
-        //   } else {
-        //     header.classList.remove('header__opa');
+        document.querySelector('.header').classList.toggle('header__scroll-up', isScrollDown);
         
-        //   }
-        // });
+        this.oldScroll = newScroll;
 
-        window.addEventListener('scroll', function(e) {
-            const
-              oldScroll = this.oldScroll || 0,
-              newScroll = this.scrollY,
-              isScrollDown = newScroll < oldScroll;
-          
-            document.querySelector('.header').classList.toggle('header__scroll-up', isScrollDown);
-          
-            this.oldScroll = newScroll;
-
-            if (newScroll == 0) {
-                document.querySelector('.header').classList.remove('header__scroll-up', isScrollDown);
-            }
-          });
+        if (newScroll == 0) {
+            document.querySelector('.header').classList.remove('header__scroll-up', isScrollDown);
+        }
+    });

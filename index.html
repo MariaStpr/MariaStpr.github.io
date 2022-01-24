@@ -517,28 +517,62 @@
                     <div class="contact__desc-text">
                         Любым удобным для вас способом:
                     </div>
-                    <form action="#" class="contact__form">
+                    <form action="#" class="contact__form" id="contact-form">
                         <div class="contact__form-input">
-                            <input type="text" name="name" id="name">
-                            <label for="name">Ваше имя</label>
+                            <input  type="text" name="name" id="name" class="form-input _req">
+                            <label for="name">Ваше имя*</label>
                         </div>
                         <div class="contact__form-input">
-                            <input type="email" name="" id="email">
-                            <label for="email">Ваша почта</label>
+                            <input name="email" type="text" id="email"  class="form-input _req _email">
+                            <label for="email">Ваша почта*</label>
                         </div>
                         <div class="contact__form-textarea">
                             <textarea name="text" id="message">
                             </textarea>
                             <label for="message">Ваше сообщение</label>
                         </div>
-                        <button class="button button_form">
-                            Отправить сообщение
-                        </button>
+                        <div class="contact__form-triggers">
+                            <button type="submit" data-modal="thanks" class="button button_form">
+                                Отправить сообщение
+                            </button>
+                            <div class="contact__form-policy">
+                                <input checked type="checkbox" name = "agreement" id="box"  class="form-input-checkbox form-input _req">
+                                <label for="box" class="checkbox__label"><span>Я согласен(а) с <a href="/policy.html" target="_blank">политикой конфиденциальности</a> </span></label>
+                            </div>
+                        </div>
+                        
                     </form>
                 </div>
             </div>
         </div>
     </section>
+    <div class="overlay">
+        <div class="modal modal__thanks" id="modal__thanks">
+            <div class="modal__close">
+                &times;
+            </div>
+            <div class="modal__subtitle">
+                Спасибо за вашу заявку!
+            </div>
+            <div class="modal__desc">
+                Я свяжусь с вами в ближайшее время!
+            </div>
+        </div>
+        <div class="modal modal__error" id="modal__error">
+            <div class="modal__close">
+                &times;
+            </div>
+            <div class="modal__subtitle">
+                Заполните обязательные поля!
+            </div>
+            <div class="modal__desc">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
