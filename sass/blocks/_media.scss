@@ -45,6 +45,16 @@
             row-gap: 30px;
         }
     }
+    .contact {
+        &__wrapper {
+            grid-template-columns: 400px 520px;
+            column-gap: 40px;
+            padding: 0;
+        }
+        &__form {
+            grid-template-columns: repeat(2, 245px);
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -84,6 +94,36 @@
         &__wrapper {
             padding: 0;
             grid-template-columns: repeat(auto-fit, 345px);
+        }
+    }
+    .contact {
+        &__wrapper {
+            grid-template-columns: 300px 380px;
+        }
+        &__form {
+            grid-template-columns: repeat(2,180px);
+            grid-template-rows: 45px 190px 45px 45px;
+            column-gap: 15px;
+            &-triggers {
+                grid-template: repeat(2, 50px) / 320px;
+                align-items: center;                
+            }
+            &-policy {
+                justify-content: center;
+                order: 1;
+            }
+        }
+        .checkbox__label {
+            justify-content: center;
+            &::after {
+                left: 11px;
+            }
+        }
+    }
+    .button {
+        &_form {
+            justify-self: center;
+            order: 2;
         }
     }
 }
@@ -142,6 +182,21 @@
     .price {
         &__wrapper {
             justify-content: center;
+        }
+    }
+    .contact {
+        padding: 70px 0 92px 0;
+        &__wrapper {
+            grid-template-columns: 100%;
+        }
+        &__img {
+            display: none;
+        }
+        &__form {
+            grid-template-columns: repeat(2,1fr);
+            &-triggers {
+                justify-content: center;
+            }
         }
     }
 }
@@ -209,6 +264,35 @@
     .price {
         &__wrapper {
             grid-template-columns: repeat(auto-fit, 290px);
+        }
+    }
+    .contact {
+        &__form {
+            grid-template: 45px 45px 190px 100px / 100%;
+            &-textarea {
+                grid-column: unset;
+            }
+            &-triggers {
+                grid-column: unset;
+                align-items: flex-start;
+                grid-template: repeat(2, 50px) / 300px;
+                row-gap: 15px;
+            }
+            &-policy {
+                max-width: 285px;
+            }
+            .checkbox__label {
+                &::after {
+                    left: 2px;
+                }
+            }
+        }
+    }
+    .modal {
+        width: 80%;
+        &__close {
+            top: 8px;
+            right: 4px;
         }
     }
 }
