@@ -1,5 +1,60 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', function() {
+
+    document.querySelectorAll('.container a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+     
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    const menu = document.querySelector('.header__list'),
+        menuItem = document.querySelectorAll('.header__item'),
+        hamburger = document.querySelector('.hamburger');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('hamburger_active');
+        menu.classList.toggle('header__list_active');
+    });
+
+    menuItem.forEach(item => {
+        item.addEventListener('click', () => {
+            hamburger.classList.toggle('hamburger_active');
+            menu.classList.toggle('header__list_active');
+        });
+    });
+
+    const percent = document.querySelectorAll('.skills__percent-sum'),
+        percentCurent = document.querySelectorAll('.skills__percent-line span');
+
+        percent.forEach((item, i) => {
+            let per = parseInt(item.innerText);
+            if (per >= 0 && per <= 100) {
+                percentCurent[i].style.width = item.innerHTML;
+            }
+            else {
+                console.log('Error');
+            }
+        });
+
+    window.addEventListener('scroll', function(e) {
+        const
+            oldScroll = this.oldScroll || 0,
+            newScroll = this.scrollY,
+            isScrollDown = newScroll < oldScroll;
+        
+        document.querySelector('.header').classList.toggle('header__scroll-up', isScrollDown);
+        
+        this.oldScroll = newScroll;
+
+        if (newScroll == 0) {
+            document.querySelector('.header').classList.remove('header__scroll-up', isScrollDown);
+        }
+    });
+    
     const form = document.getElementById('contact-form'),
           overlay = document.querySelector('.overlay'),
           modalThanks = overlay.querySelector('.modal__thanks'),
@@ -87,48 +142,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return !/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.test(input.value);
     }
 
-    const menu = document.querySelector('.header__list'),
-        menuItem = document.querySelectorAll('.header__item'),
-        hamburger = document.querySelector('.hamburger');
-
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('hamburger_active');
-        menu.classList.toggle('header__list_active');
-    });
-
-    menuItem.forEach(item => {
-        item.addEventListener('click', () => {
-            hamburger.classList.toggle('hamburger_active');
-            menu.classList.toggle('header__list_active');
-        });
-    });
-
-    const percent = document.querySelectorAll('.skills__percent-sum'),
-        percentCurent = document.querySelectorAll('.skills__percent-line span');
-
-        percent.forEach((item, i) => {
-            let per = parseInt(item.innerText);
-            if (per >= 0 && per <= 100) {
-                percentCurent[i].style.width = item.innerHTML;
-            }
-            else {
-                console.log('Error');
-            }
-        });
-
-    window.addEventListener('scroll', function(e) {
-        const
-            oldScroll = this.oldScroll || 0,
-            newScroll = this.scrollY,
-            isScrollDown = newScroll < oldScroll;
-        
-        document.querySelector('.header').classList.toggle('header__scroll-up', isScrollDown);
-        
-        this.oldScroll = newScroll;
-
-        if (newScroll == 0) {
-            document.querySelector('.header').classList.remove('header__scroll-up', isScrollDown);
-        }
-    });
+    
 });
 
