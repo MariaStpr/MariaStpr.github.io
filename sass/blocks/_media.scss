@@ -82,6 +82,7 @@
     .about {
         &__wrapper {
             grid-template-columns: 300px 380px;
+            grid-template-rows: 385px auto;
         }
         &__img {
             grid-row: unset;
