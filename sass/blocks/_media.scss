@@ -58,8 +58,26 @@
 }
 
 @media (max-width: 992px) {
+    .header {
+        &__item {
+            a {
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+    }
     .container {
         max-width: 720px;
+    }
+    .main {
+        .intro-main {
+            &__link {
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
     }
     .about {
         &__wrapper {
@@ -89,11 +107,23 @@
             padding: 0 15px;
             grid-template: repeat(2, minmax(270px, auto)) / repeat(2, 330px);
         }
+        &__items {
+            &:hover {
+                box-shadow: unset;
+            }
+        }
     }
     .price {
         &__wrapper {
             padding: 0;
             grid-template-columns: repeat(auto-fit, 345px);
+        }
+    }
+    .work {
+        &__item {
+            &:hover {
+                filter: unset;
+            }
         }
     }
     .contact {
@@ -124,6 +154,9 @@
         &_form {
             justify-self: center;
             order: 2;
+        }
+        &:hover {
+            box-shadow: unset;
         }
     }
 }

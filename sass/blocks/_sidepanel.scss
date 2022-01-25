@@ -6,7 +6,8 @@
     align-items: center;
     height: 338px;
     z-index: 3;
-    top: 182px;
+    top: 50%;
+    transform: translateY(-50%);
     left: 42px;
     &__divider {
         height: 70px;
