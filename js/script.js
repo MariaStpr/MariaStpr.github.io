@@ -1,30 +1,42 @@
 'use strict';
-
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contact-form');
-    const overlay = document.querySelector('.overlay'),
-         modalThanks = overlay.querySelector('.modal__thanks'),
-         modalError = overlay.querySelector('.modal__error'),
-         modalClose = overlay.querySelectorAll('.modal__close');
-          
-    form.addEventListener('submit', formSend);
+    const form = document.getElementById('contact-form'),
+          overlay = document.querySelector('.overlay'),
+          modalThanks = overlay.querySelector('.modal__thanks'),
+          modalError = overlay.querySelector('.modal__error'),
+          modalClose = overlay.querySelectorAll('.modal__close');
 
+    form.addEventListener('submit', formSend);
     async function formSend(e) {
         e.preventDefault();
 
         let error = formValidate(form);
 
-        if (error === 0) {
-            overlay.classList.add('overlay_active');
-            modalThanks.classList.add('modal_active');
-            modalError.classList.add('modal_hidden');
+        let formData = new FormData(form);
 
+        if (error === 0) {
+            form.classList.add('contact__form-sending');
+            let response = await fetch('sendmail.php', {
+                method: 'POST',
+                body: formData
+            });
+            if (response.ok) {
+                let result = await response.json();
+                console.log(result.message);
+                overlay.classList.add('overlay_active');
+                modalThanks.classList.add('modal_active');
+                modalError.classList.add('modal_hidden');
+                form.reset();
+                form.classList.remove('contact__form-sending');
+            } else {
+                alert('Error');
+                form.classList.remove('contact__form-sending');
+            }
         } else {
             overlay.classList.add('overlay_active');
             modalError.classList.add('modal_active');
-            modalThanks.classList.add('modal_hidden');            
+            modalThanks.classList.add('modal_hidden');
         }
-
         modalClose.forEach(item => {
             item.addEventListener('click', () => {
                 overlay.classList.remove('overlay_active');
@@ -62,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return error;
     }
-
     function formAddError(input) {
         input.parentElement.classList.add('_error');
         input.classList.add('_error');
@@ -71,16 +82,12 @@ document.addEventListener('DOMContentLoaded', function() {
         input.parentElement.classList.remove('_error');
         input.classList.remove('_error');
     }
-
-    //Функция теста email
+        //Функция теста email
     function emailTest(input) {
         return !/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.test(input.value);
     }
 
-    
-});
-
-const menu = document.querySelector('.header__list'),
+    const menu = document.querySelector('.header__list'),
         menuItem = document.querySelectorAll('.header__item'),
         hamburger = document.querySelector('.hamburger');
 
@@ -123,3 +130,5 @@ const menu = document.querySelector('.header__list'),
             document.querySelector('.header').classList.remove('header__scroll-up', isScrollDown);
         }
     });
+});
+
