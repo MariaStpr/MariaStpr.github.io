@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    //Меню-гамбургер
     const menu = document.querySelector('.header__list'),
         menuItem = document.querySelectorAll('.header__item'),
         hamburger = document.querySelector('.hamburger');
@@ -40,21 +41,21 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
+    
     window.addEventListener('scroll', function(e) {
         const
-            oldScroll = this.oldScroll || 0,
             newScroll = this.scrollY,
-            isScrollDown = newScroll < oldScroll;
+            isScrollDown = 100 + 'px';
         
-        document.querySelector('.header').classList.toggle('header__scroll-up', isScrollDown);
+        document.querySelector('.header').classList.toggle('header__scroll', isScrollDown);
         
         this.oldScroll = newScroll;
 
         if (newScroll == 0) {
-            document.querySelector('.header').classList.remove('header__scroll-up', isScrollDown);
+            document.querySelector('.header').classList.remove('header__scroll', isScrollDown);
         }
     });
-    
+
     const form = document.getElementById('contact-form'),
           overlay = document.querySelector('.overlay'),
           modalThanks = overlay.querySelector('.modal__thanks'),
