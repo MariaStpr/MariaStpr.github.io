@@ -61,10 +61,10 @@
             <nav class="header__list">
                 <ul class="header__items">
                     <li class="header__item"><a href="#about">ПРО МЕНЯ</a></li>
-                    <li class="header__item"><a href="#experience">МОЙ ОПЫТ</a></li>
+                    <!-- <li class="header__item"><a href="#experience">МОЙ ОПЫТ</a></li> -->
                     <li class="header__item"><a href="#skills">МОИ НАВЫКИ</a></li>
                     <li class="header__item"><a href="#works">МОИ РАБОТЫ</a></li>
-                    <li class="header__item"><a href="#price">ПРАЙС-ЛИСТ</a></li>
+                    <!-- <li class="header__item"><a href="#price">ПРАЙС-ЛИСТ</a></li> -->
                     <li class="header__item"><a href="#contacts">КОНТАКТЫ</a></li>
                 </ul>
                 <div class="header__social">
@@ -84,43 +84,47 @@
     </div>
     <section class="main">
         <div class="container">
-            <div class="main__intro intro-main">
-                <div class="intro-main__info subtitle subtitle_main">
-                    Меня зовут Мария Степура
+           <div class="main__wrapper">
+                <div class="main__intro intro-main">
+                    <div class="intro-main__info subtitle subtitle_main">
+                        Привет, меня зовут
+                    </div>
+                    <h1 class="intro-main__title title title_main">
+                        Мария Степура
+                    </h1>
+                    <div class="intro-main__web">
+                        Начинающий web-разработчик
+                    </div>
+                    <div class="intro-main__btns">
+                        <a href="#works" class="intro-main__btn button button__main">Портфолио</a>
+                        <a href="#about" class="intro-main__link">Про меня</a>
+                    </div>
                 </div>
-                <h1 class="intro-main__title title title_main">
-                    Я web-разработчик из города Улан-Удэ
-                </h1>
-                <div class="intro-main__btns">
-                    <a href="#works" class="intro-main__btn button button__main">Портфолио</a>
-                    <a href="#about" class="intro-main__link">Про меня</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about__wrapper">
-                <div class="about__img">
-                    <!-- <img src="img/main_photo.jpg" alt="" class="about__me"> -->
+                <div class="intro-main__img">
                     <picture>
-                        <source media="(max-width: 768px)" srcset="img/me-min.jpg">
-                        <source media="(min-width: 577px)" srcset="img/main_photo-min.jpg">
                         <img src="img/main_photo.jpg" alt="">
                     </picture>
                 </div>
+           </div>
+           <div class="main__bg">
+            </div>
+        </div>
+        
+    </section>
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="about__subtitle subtitle">
+                Про меня
+            </h2>
+            <div class="about__wrapper">
                 <div class="about__desc">
-                    <h2 class="about__subtitle subtitle">
-                        Про меня
-                    </h2>
                     <div class="about__title title title_blocks">
                         Меня зовут Мария
                     </div>
                     <p class="about__info">
                         Начала интересоваться разработкой сайтов в июне 2021г.: прошла трехдневный интенсив по Тильде, хотела связать себя с этим, но поняла, что это не то, чем я хотела бы заниматься.<br>
-                        В июле начала интересоваться разработкой сайтов с помощью web-разработкой. Сначала обучалась самостоятельно, позже приобрела 2 курса на Udemy(web-разработчик 2021,  Полный курс по JavaScript + React - с нуля до результата. По сей день прохожу эти курсы и изучаю web-разработку.
+                        В июле начала интересоваться web-разработкой. Сначала обучалась самостоятельно, позже приобрела 2 курса на Udemy (web-разработчик 2021,  Полный курс по JavaScript + React - с нуля до результата). По сей день изучаю web-разработку.
                     </p>
-                    
                 </div>
                 <div class="about__skills skills-about">
                     <div class="skills-about__item">
@@ -132,15 +136,19 @@
                                 Web-разработка
                             </div>
                             <div class="skills-about__desc">
-                                Окончила курс “web-разработчик 2021”. HTML, CSS, Sass, Scss, адаптивная верстка, Flexbox, Grid.
+                                Окончила курс “web-разработчик 2021”. <br>
+                                Практиковалась на учебных макетах, благодаря чему имею в портфолио 2 сайта.
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="end">
+                <img src="img/end.png" alt="end">
+            </div>
         </div>
     </section>
-    <section class="resume" id="experience">
+    <!-- <section class="resume" id="experience">
         <div class="container"> 
             <div class="resume__subtitle subtitle">
                 Опыт
@@ -171,7 +179,7 @@
                                     
                                 </div>
                                 <div class="resume__item-body">
-                                    Специальность “бизнес-информатика”.Изучала экономику и ИТ-технологии.
+                                    Специальность “бизнес-информатика”. Изучала экономику и ИТ-технологии.
                                 </div>
                             </div>
                         </li>
@@ -186,7 +194,7 @@
                                             Udemy
                                         </div>
                                         <div class="resume__item-sub">
-                                            Курсы по Web-разработке 
+                                            Курсы по Web-разработке и JavaScript
                                         </div>
                                     </div>
                                     
@@ -211,10 +219,10 @@
                                     </div>
                                     <div class="resume__item-text">
                                         <div class="resume__item-title title title_edu">
-                                            Front-End Developer
+                                            Веб-разработчик
                                         </div>
                                         <div class="resume__item-sub">
-                                            Без опыта.
+                                            
                                         </div>
                                     </div>
                                     
@@ -228,7 +236,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <section class="skills" id="skills">
         <div class="container">
             <div class="skills__subtitle subtitle">
@@ -267,6 +275,32 @@
                 <div class="skills__items">
                     <div class="skills__item">
                         <div class="skills__item-img">
+                            <img src="icons/skills/figma.svg" alt="Figma">
+                        </div>
+                        <div class="skills__item-name">
+                            Figma
+                        </div>
+                        <div class="skills__item-text">
+                            Figma — это онлайн-сервис для разработки интерфейсов и прототипирования с возможностью организации совместной работы в режиме реального времени. 
+                        </div>
+                    </div>
+                </div>
+                <div class="skills__items">
+                    <div class="skills__item">
+                        <div class="skills__item-img">
+                            <img src="icons/skills/sass.png" alt="HTML5">
+                        </div>
+                        <div class="skills__item-name">
+                            SASS (SCSS)
+                        </div>
+                        <div class="skills__item-text">
+                            Sass — это метаязык на основе CSS, предназначенный для увеличения уровня абстракции CSS-кода и упрощения файлов каскадных таблиц стилей. SCSS (Sassy CSS) — использует фигурные скобки, как и сам CSS.
+                        </div>
+                    </div>
+                </div>
+                <div class="skills__items">
+                    <div class="skills__item">
+                        <div class="skills__item-img">
                             <img src="icons/skills/js.svg" alt="HTML5">
                         </div>
                         <div class="skills__item-name">
@@ -290,7 +324,7 @@
                         </div>
                     </div>
                 </div> -->
-                <!-- <div class="skills__items">
+                <div class="skills__items">
                     <div class="skills__item">
                         <div class="skills__item-img">
                             <img src="icons/skills/github.svg" alt="HTML5">
@@ -302,9 +336,10 @@
                             GitHub это система управления проектами и версиями кода, а также платформа социальных сетей, созданная для разработчиков.
                         </div>
                     </div>
-                </div> -->
+                </div>
+                
             </div>
-            <div class="skills__percent">
+            <!-- <div class="skills__percent">
                 <div class="skills__percent-item">
                     <div class="skills__percent-header">
                         <div class="skills__percent-name">
@@ -324,7 +359,7 @@
                             Подключение хостинга
                         </div>
                         <div class="skills__percent-sum">
-                            85%
+                            90%
                         </div>
                     </div>
                     <div class="skills__percent-line">
@@ -357,7 +392,7 @@
                         <span></span>                    
                     </div>
                 </div>
-                <!-- <div class="skills__percent-item">
+                <div class="skills__percent-item">
                     <div class="skills__percent-header">
                         <div class="skills__percent-name">
                             Посадка верстки на CMS
@@ -369,21 +404,24 @@
                     <div class="skills__percent-line">
                         <span></span>                    
                     </div>
-                </div> -->
+                </div>
                 <div class="skills__percent-item">
                     <div class="skills__percent-header">
                         <div class="skills__percent-name">
                             Soft skills
                         </div>
                         <div class="skills__percent-sum">
-                            70%
+                            75%
                         </div>
                     </div>
                     <div class="skills__percent-line">
                         <span></span>                    
                     </div>
                 </div>
-            </div>
+            </div> -->
+        </div>
+        <div class="end">
+            <img src="img/end.png" alt="end">
         </div>
     </section>
     <section class="work" id="works">
@@ -395,25 +433,45 @@
                 Мои работы
             </h2>
             <div class="work__wrapper">
-                <a href="https://mariastpr.github.io/uber/" target="_blank" class="work__item">
+                <div class="work__item">
                     <img src="img/works/uber-min.jpg" alt="uber">
-                </a>
-                <a href="https://mariastpr.github.io/puls/" target="_blank" class="work__item">
+                    <div class="work__info">
+                        Учебный проект, созданный на курсе. 
+                        <a href="https://mariastpr.github.io/uber" target="_blank">Просмотреть</a>
+                    </div>
+                </div>
+                <div class="work__item">
                     <img src="img/works/pulse-min.jpg" alt="pulse">
-                </a>
+                    <div class="work__info">
+                        Учебный проект, созданный на курсе. 
+                        <a href="https://mariastpr.github.io/puls/" target="_blank">Просмотреть</a>
+                    </div>
+                </div>
                 <!-- <a href="/wayup" target="_blank" class="work__item">
                     <img src="img/works/case-min.png" alt="wayup">
                 </a> -->
-                <a href="https://mariastpr.github.io/innovated/" target="_blank" class="work__item horizontal">
+                <div class="work__item">
                     <img src="img/works/video-min.png" alt="innovated">
-                </a>
-                <a href="https://mariastpr.github.io/furniture/" target="_blank" class="work__item horizontal">
+                    <div class="work__info">
+                        Учебный проект, созданный самостоятельно.
+                        <a href="https://mariastpr.github.io/innovated/" target="_blank">Просмотреть</a>
+                    </div>
+                </div>
+                <div class="work__item">
                     <img src="img/works/materials3.jpg" alt="furniture">
-                </a>
+                    <div class="work__info">
+                        Учебный проект, созданный самостоятельно.
+                        <a href="https://mariastpr.github.io/furniture/" target="_blank">Просмотреть</a>
+                    </div>
+                </div>
+                
             </div>
         </div>
+        <div class="end">
+            <img src="img/end.png" alt="end">
+        </div>
     </section>
-    <section class="price" id="price">
+    <!-- <section class="price" id="price">
         <div class="container">
             <div class="price__subtitle subtitle">
                 Прайс-лист
@@ -474,17 +532,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <section class="contact" id="contacts">
         <div class="container">
             <div class="contact__wrapper">
-                <div class="contact__img">
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="img/me.jpg">
-                        <source media="(min-width: 577px)" srcset="img/main_photo.jpg">
-                        <img src="img/main_photo.jpg" alt="">
-                    </picture>
-                </div>
                 <div class="contact__desc">
                     <div class="contact__desc-subtitle subtitle">
                         Контакты
@@ -492,14 +543,6 @@
                     <h2 class="contact__desc-title title title_blocks">
                         Свяжитесь со мной
                     </h2>
-                    <div class="contact__desc-text">
-                        Любым удобным для вас способом:
-                    </div>
-                    <div class="contact__desc-social">
-                        <a href="https://www.instagram.com/maria_stpr/" target="_blank" class="header__link icon-instagram"></a>
-                        <a href="https://t.me/MariaStepura" target="_blank" class="header__link icon-telegram"></a>
-                        <a href="viber://chat?number=+79146355263" class="header__link icon-viber" target="_blank"></a>
-                    </div>
                     <div class="contact__desc-text">
                         Любым удобным для вас способом:
                     </div>
@@ -526,12 +569,24 @@
                                 <label for="box" class="checkbox__label"><span>Я согласен(а) с <a href="/policy.html" target="_blank">политикой конфиденциальности</a> </span></label>
                             </div>
                         </div>
-                        
                     </form>
                 </div>
             </div>
         </div>
     </section>
+    <footer class="footer">
+        <div class="footer__btn">
+            <img src="icons/skills/arrow.svg" alt="arrow to top">
+        </div>
+        <div class="footer__top">
+            BACK TO TOP
+        </div>
+        <div class="footer__desc-social">
+            <a href="https://www.instagram.com/maria_stpr/" target="_blank" class="header__link icon-instagram"></a>
+            <a href="https://t.me/MariaStepura" target="_blank" class="header__link icon-telegram"></a>
+            <a href="viber://chat?number=+79146355263" class="header__link icon-viber" target="_blank"></a>
+        </div>
+    </footer>
     <div class="overlay">
         <div class="modal modal__thanks" id="modal__thanks">
             <div class="modal__close">

@@ -2,19 +2,20 @@
     padding: 120px 0 92px 0;
     &__wrapper {
         padding: 0 35px;
-        display: grid;
-        grid-template-columns: 400px 585px;
-        column-gap: 60px;
+        width: 60%;
+        margin: 0 auto;
     }
     &__desc {
         &-subtitle {
             position: relative;
             z-index: 2;
             padding-left: 12px;
+            text-align: center;
             @include before_circle-main;
             &:before {
-                top: -25%;
-                left: -1px;
+                left: 50%;
+                top: -5px;
+                transform: translateX(-50%);
             }
         }
         &-title {
@@ -28,48 +29,7 @@
                 background-color: $main_color;
             }
         }
-        &-text {
-            font-weight: bold;
-            font-size: 14px;
-            line-height: 150%;
-            margin-top: 20px;
-        }
-        &-social {
-            margin-top: 15px;
-            a {
-                text-decoration: none;
-                color: #000;
-                margin-right: 15px;
-            }
-            .icon-telegram {
-                font-size: 30px;
-                &::before {
-                    content: "\e903";
-                    color: #000;
-                }
-            }
-            .icon-instagram {
-                font-size: 30px;
-                &::before {
-                    content: "\e902";
-                    color: #000;
-                }
-            }
-            .icon-github {
-                font-size: 30px;
-                &::before {
-                    content: "\e901";
-                    color: #000;
-                }
-            }
-            .icon-viber {
-                font-size: 30px;
-                &::before {
-                    content: "\e904";
-                    color: #000;
-                }
-            }
-        }
+        
         
     }
     &__img {

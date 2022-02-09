@@ -19,6 +19,14 @@ body {
     margin: 0 auto;
 }
 
+.end {
+    margin-top: 25px;
+    img {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
 @import "blocks/header";
 @import "blocks/buttons";
 @import "blocks/title";
@@ -30,6 +38,7 @@ body {
 @import "blocks/works";
 @import "blocks/price";
 @import "blocks/contact";
+@import "blocks/footer";
 @import "blocks/modal";
 
 @import "blocks/_media";

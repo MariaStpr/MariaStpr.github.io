@@ -1,5 +1,5 @@
 .work {
-    padding-top: 120px;
+    padding-top: 60px;
     &__subtitle {
         position: relative;
         text-align: center;
@@ -31,15 +31,49 @@
         grid-auto-rows: 280px;
         gap: 5px;
     }
+    
     &__item {
+        position: relative;
         transition: all 0.5s ease;
+        &:hover { 
+            img {
+                filter: blur(2px);
+            }
+        }
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        .work__info {
+            width: 80%;
+            padding: 15px;
+            display: block;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-decoration: none;
+            color: $bg_color;
+            background-color: $main_color;
+            transition: opacity 0.5s ease;
+            a {
+                margin-top: 5px;
+                color: #000;
+                transition: color 0.3s ease;
+                &:hover {
+                    color: rgb(0, 4, 255);
+                }
+            }
         }
         &:hover {
-            filter: blur(2px);
+           .work__info {
+                opacity: 0.9;
+            } 
         }
     }
 }

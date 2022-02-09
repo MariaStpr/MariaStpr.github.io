@@ -56,6 +56,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Портфолио
+   
+let workLink = document.getElementsByClassName("work__item");
+let tp = document.getElementsByClassName("work__info");
+
+    function show(){
+        tp.style.display="block";
+    }
+    function hide(){
+        tp.style.display="";
+    }
+
+
+
     const form = document.getElementById('contact-form'),
           overlay = document.querySelector('.overlay'),
           modalThanks = overlay.querySelector('.modal__thanks'),
@@ -142,7 +156,14 @@ document.addEventListener('DOMContentLoaded', function() {
     function emailTest(input) {
         return !/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.test(input.value);
     }
-
-    
 });
 
+// Переход наверх по кнопке
+const btnToTop = document.querySelector('.footer__btn');
+
+btnToTop.addEventListener('click', () => {
+    document.querySelector('.main').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+});

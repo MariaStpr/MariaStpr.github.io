@@ -1,12 +1,10 @@
 .about {
     padding-top: 120px;
     &__wrapper {
-        display: grid;
-        grid-template-columns: 400px 665px;
-        grid-template-rows: 290px 240px;
-        grid-auto-rows: minmax(245px, auto);
-        column-gap: 70px;
-        row-gap: 40px;
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        margin-top: 20px;
     }
     &__subtitle {
         position: relative;
@@ -35,6 +33,7 @@
     }
     &__desc {
         padding-top: 6px;
+        flex: 0 0 60%;
     }
     &__info {
         font-size: 16px;
@@ -44,7 +43,7 @@
     }
     &__skills {
         display: grid;
-        grid-template: 115px / repeat(2, 300px);
+        grid-template: 145px / 300px;
         grid-auto-rows: 1fr;
         column-gap: 50px;
         row-gap: 20px;

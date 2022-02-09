@@ -14,12 +14,12 @@
 @mixin before_circle-main {
     &:before {
         content: '';
-        width: 36px;
-        height: 36px;
+        width: 54px;
+        height: 54px;
         border-radius: 100%;
         background: $main_color;
         position: absolute;
-        top: -25%;
+        top: -10%;
         left: 0;
         z-index: -1;
     }
