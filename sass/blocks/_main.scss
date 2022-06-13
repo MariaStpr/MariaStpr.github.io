@@ -1,9 +1,9 @@
 .main {
     position: relative;
-    // background: url('../img/main_bg-min.jpeg') no-repeat center center / cover;
     min-height: 100vh;
     padding: 120px 15px;
     overflow: hidden;
+    border-bottom: 2px solid #302f31;
     &__intro {
         // max-width: 532px;
     }

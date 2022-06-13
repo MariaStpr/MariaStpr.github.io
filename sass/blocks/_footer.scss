@@ -7,9 +7,15 @@
         width: 30px;
         height: 30px;
         cursor: pointer;
+        position: relative;
         img {
+            position: absolute;
             width: 100%;
             height: 100%;
+            animation-duration: 1s;
+            animation-name: slidein;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
         }
     }
     &__top {
@@ -62,3 +68,13 @@
         }
     }
 }
+
+@keyframes slidein {
+    from {
+      top: 10px;
+    }
+  
+    to {
+      top: 0;
+    }
+  }
