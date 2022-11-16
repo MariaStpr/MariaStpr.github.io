@@ -143,18 +143,18 @@
             background-color: #fff;
             border-radius: 4px;
             margin-right: 10px;
-            border: 1px solid #000;
+            border: 2px solid $main_color;
             position: relative;
             &::after {
                 transition: all 2s ease;
-                content: '';
+                content: '✔';
+                color: $main_color;
+                font-size: 16px;
+                font-weight: 900;
                 display: none;
-                width: 14px;
-                height: 14px;
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                background-color: $main_color;
                 border-radius: 3px;
                 transform: translate(-50%, -50%) scale(0);
             }
