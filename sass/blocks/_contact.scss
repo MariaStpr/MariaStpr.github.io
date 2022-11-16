@@ -124,8 +124,9 @@
     }
     .form-input-checkbox {
         display: none;
-        &:checked + .checkbox__label::after {
-            transform: scale(1);
+        &:checked + .check::after {
+            transform: translate(-50%, -50%) scale(1);
+            display: block;
         }
     }
     .checkbox__label {
@@ -136,26 +137,27 @@
         padding: 0;
         cursor: pointer;
         margin-top: 5px;
-        &::before {
-            content: '';
-            flex: 0 0 18px;
+        .check {
             height: 18px;
+            width: 18px;
             background-color: #fff;
             border-radius: 4px;
             margin-right: 10px;
             border: 1px solid #000;
-        }
-        &::after {
-            transition: transform 0.5s ease 0s;
-            content: '';
-            width: 14px;
-            height: 14px;
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            background-color: $main_color;
-            border-radius: 3px;
-            transform: scale(0);
+            position: relative;
+            &::after {
+                transition: all 2s ease;
+                content: '';
+                display: none;
+                width: 14px;
+                height: 14px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                background-color: $main_color;
+                border-radius: 3px;
+                transform: translate(-50%, -50%) scale(0);
+            }
         }
         span {
             font-size: 12px;
@@ -163,14 +165,7 @@
             color: #000000;
         }
     }
-
-    .contact__form-policy._error  {
-        .checkbox__label {
-            &::before {
-                border: 1px solid $main_color;
-            }
-        }
-    }
+    
     .form-input._error {
         border: 2px solid $main_color;
     }
