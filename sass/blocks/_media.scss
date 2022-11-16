@@ -157,7 +157,8 @@
             column-gap: 15px;
             &-triggers {
                 grid-template: repeat(2, 50px) / 320px;
-                align-items: center;                
+                align-items: center;
+                justify-content: center;
             }
             &-policy {
                 justify-content: center;
@@ -277,6 +278,12 @@
     }
 }
 
+@media (max-width: 768px) and (min-height: 525px) {
+    .main {
+        min-height: 80vh;
+    }
+}
+
 @media (max-width: 576px) {
     .container {
         max-width: 100%;
@@ -312,7 +319,12 @@
             background: #bababa54;
             padding: 45px 10px;
             border-radius: 8px;
-            width: 100%;
+            
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90vw;
             &__info {
                 text-align: start;
                 font-size: 25px;
@@ -380,7 +392,7 @@
             &-triggers {
                 grid-column: unset;
                 align-items: flex-start;
-                grid-template: repeat(2, 50px) / 290px;
+                grid-template: repeat(2, 50px) / 80vw;
                 row-gap: 15px;
             }
             &-policy {
@@ -392,10 +404,7 @@
             }
         }
         .checkbox__label {
-            width: 70%;
-            &::before {
-                margin-right: 5px;
-            }
+            // width: 70%;
         }
     }
     .modal {
@@ -403,6 +412,16 @@
         &__close {
             top: 8px;
             right: 4px;
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    .contact {
+        .checkbox__label {
+            span {
+                width: 50vw;
+            }
         }
     }
 }

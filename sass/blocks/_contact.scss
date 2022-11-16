@@ -69,7 +69,7 @@
                 visibility: visible;
             }
         }
-        label {
+        .form-input__name {
             position: absolute;
             display: block;
             height: 18px;
@@ -131,7 +131,7 @@
     }
     .checkbox__label {
         display: inline-flex;
-        align-items: flex-start;
+        align-items: center;
         position: relative;
         width: 100%;
         padding: 0;

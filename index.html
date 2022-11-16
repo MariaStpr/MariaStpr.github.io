@@ -617,16 +617,16 @@
                     <form action="#" class="contact__form" id="contact-form">
                         <div class="contact__form-input">
                             <input  type="text" name="name" id="name" class="form-input _req">
-                            <label for="name">Ваше имя*</label>
+                            <label class="form-input__name" for="name">Ваше имя*</label>
                         </div>
                         <div class="contact__form-input">
                             <input name="email" type="text" id="email"  class="form-input _req _email">
-                            <label for="email">Ваша почта*</label>
+                            <label class="form-input__name" for="email">Ваша почта*</label>
                         </div>
                         <div class="contact__form-textarea">
                             <textarea name="textmessage" id="message">
                             </textarea>
-                            <label for="message">Ваше сообщение</label>
+                            <label class="form-input__name" for="message">Ваше сообщение</label>
                         </div>
                         <div class="contact__form-triggers">
                             <button type="submit" data-modal="thanks" class="button button_form">
@@ -636,7 +636,7 @@
                                 <label for="box" class="checkbox__label">
                                     <input checked type="checkbox" name = "agreement" id="box"  class="form-input-checkbox form-input _req">
                                     <div class="check"></div>
-                                    <span>Я согласен(а) с <a href="/policy.html" target="_blank">политикой конфиденциальности</a> </span>
+                                    <span>Я согласен(а) с <a href="/policy.html" class="policy__link" target="_blank">политикой конфиденциальности</a> </span>
                                 </label>
                             </div>
                         </div>
