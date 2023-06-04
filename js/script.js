@@ -75,6 +75,7 @@ const form = document.getElementById('contact-form'),
         modalClose = overlay.querySelectorAll('.modal__close');
 
 form.addEventListener('submit', formSend);
+
 async function formSend(e) {
     e.preventDefault();
 
