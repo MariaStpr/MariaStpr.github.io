@@ -4,11 +4,11 @@
     z-index: 10;
     top: 0;
     width: 100%;
+    background-color: #302f31;
     
     &__scroll {
         position: fixed;
         transition: opacity 0.3s ease;
-        background-color: #302f31;
         &:hover {
             opacity: 1;
         }
@@ -57,7 +57,6 @@
 
 @media (max-width: 992px) {
     .header {
-        background-color: rgb(255, 243, 243, 0);
         &__list {
             position: fixed;
             top: -150%;
@@ -172,7 +171,7 @@
                 display: block;
                 height: 3px;
                 width: 100%;
-                background-color: $main_color;
+                background-color: $bg_color;
                 transition: 0.5s all;
             }
             span.long {

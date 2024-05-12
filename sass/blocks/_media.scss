@@ -8,32 +8,28 @@
     .container {
         max-width: 960px;
     }
-    .header {
-        &__item {
-            a {
-                color: #ff6565;
-            }
+    .promo {
+        &__wrapper {
+            justify-content: space-around;
+        }
+        &__bg {
+            font-size: 50px;
+            line-height: 65px;
         }
     }
     .main {
+        &__bg {
+            width: 60%;
+        }
         .intro-main {
             &__title {
-                font-size: 65px;
+                font-size: 50px;
             }
         }
     }
     .about {
-        &__wrapper {
-        }
         &__skills {
             column-gap: 20px;
-            grid-template: 165px / 300px;
-        }
-        .skills-about {
-            &__item {
-                grid-template-columns: 55px 225px;
-
-            }
         }
     }
     .resume {
@@ -83,6 +79,21 @@
     .container {
         max-width: 720px;
     }
+    .promo {
+        &__title {
+            font-size: 45px;
+        }
+        &__subtitle {
+            font-size: 35px;
+        }
+        &__desc {
+            font-size: 18px;
+        }
+        &__bg {
+            font-size: 40px;
+            line-height: 45px;
+        }
+    }
     .main {
         &__bg {
             width: 60%;
@@ -92,7 +103,11 @@
                 font-size: 30px;
             }
             &__title {
-                font-size: 50px;
+                font-size: 40px;
+                line-height: 40px;
+            }
+            &__img {
+                width: 35%;
             }
             &__link {
                 &:hover {
@@ -109,11 +124,12 @@
             grid-row: unset;
         }
         &__skills {
-            grid-template: 165px / 225px;
+            grid-template: auto / 400px;
+            grid-template-columns: repeat(2, 1fr);
         }
         .skills-about {
             &__item {
-                grid-template-columns: 55px 300px;
+                grid-template-columns: 55px 260px;
                 column-gap: 20px;
             }
         }
@@ -187,6 +203,29 @@
     .container {
         max-width: 540px;
     }
+    .promo {
+        &__bg {
+            display: none;
+        }
+        &__text {
+            text-align: center;
+            &::before {
+                display: none;
+            }
+            &::after {
+                display: none;
+            }
+        }
+        &__title {
+            font-size: 50px;
+        }
+        &__subtitle {
+            font-size: 40px;
+        }
+        &__desc {
+            font-size: 20px;
+        }
+    }
     .subtitle {
         font-size: 26px;
         &_main {
@@ -201,7 +240,7 @@
     }
     .main {
         &__bg {
-            width: 61%;
+            width: 65%;
         }
         .intro-main {
             &__info {
@@ -220,11 +259,14 @@
             }
         }
         .intro-main__btns {
-            width: 270px;
+            width: 260px;
             a {
                 color: #302f31;
             }
         }
+    }
+    .button {
+        width: 150px;
     }
     .about {
         padding-top: 40px;
@@ -232,11 +274,11 @@
             grid-template: 400px auto auto / 100%;
         }
         &__skills {
-            grid-template-columns: repeat(2, 260px);
+            grid-template-columns: auto;
         }
         .skills-about {
             &__item {
-                grid-template-columns: 55px 185px;
+                grid-template-columns: 55px auto;
             }
         }
     }
@@ -278,12 +320,6 @@
     }
 }
 
-@media (max-width: 768px) and (min-height: 525px) {
-    .main {
-        min-height: 80vh;
-    }
-}
-
 @media (max-width: 576px) {
     .container {
         max-width: 100%;
@@ -308,14 +344,25 @@
             gap: 10px;
         }
     }
+    .promo {
+        &__title {
+            font-size: 35px;
+        }
+        &__subtitle {
+            font-size: 25px;
+        }
+        &__desc {
+            font-size: 18px;
+        }
+    }
     .main {
+        min-height: 100vh;
         padding: 120px 0;
         background: url('../img/main_bg-min.jpeg') no-repeat center center / cover;
         &__bg {
             display: none;
         }
         .intro-main{
-            text-align: center;
             background: #bababa54;
             padding: 45px 10px;
             border-radius: 8px;
@@ -339,10 +386,12 @@
                 color: #fff;
             }
             &__btns {
-                margin: 21px auto 0 auto;
+                margin: 21px 0 0 0;
                 max-width: 260px;
                 a {
                     color: #fff;
+                    text-align: center;
+                    width: 50%;
                 }
             }
             &__img {

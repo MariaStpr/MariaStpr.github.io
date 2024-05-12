@@ -1,11 +1,9 @@
 .main {
     position: relative;
-    min-height: 100vh;
-    padding: 120px 15px;
+    // min-height: 100vh;
+    padding: 60px 15px;
     overflow: hidden;
     border-bottom: 2px solid #302f31;
-    &__intro {
-    }
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -39,8 +37,8 @@
         &__title {
             margin-top: 16px;
             font-weight: 700;
-            font-size: 70px;
-            line-height: 94px;
+            font-size: 60px;
+            line-height: 74px;
             color: #000000;
         }
         &__web {

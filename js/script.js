@@ -161,7 +161,7 @@ function emailTest(input) {
 const btnToTop = document.querySelector('.footer__btn');
 
 btnToTop.addEventListener('click', () => {
-    document.querySelector('.main').scrollIntoView({
+    document.querySelector('.promo').scrollIntoView({
         behavior: 'smooth',
         block: 'start'
     });

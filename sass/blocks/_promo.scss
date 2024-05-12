@@ -1,0 +1,83 @@
+.promo {
+    min-height: 100vh;
+    background-color: $bg_color;
+    padding: 0 15px;
+    border-bottom: 1px solid #000;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    &__text {
+        position: relative;
+        color: #302f31;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -10px;
+            width: 60px;
+            height: 2px;
+            background-color: $main_color;
+        }
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 40px;
+            left: -48px;
+            width: 80px;
+            height: 2px;
+            background-color: $main_color;
+            transform: rotate(90deg);
+        }
+    }
+    
+    &__title {
+        font-size: 50px;
+    }
+    
+    &__subtitle {
+        font-size: 40px;
+        border-bottom: 2px solid $main_color;
+    }
+    
+    &__desc {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    &__bg {
+        font-weight: 700;
+        font-style: normal;
+        font-size: 64px;
+        opacity: 0.5;
+        letter-spacing: -3px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+        line-height: 75px;
+        span {
+            color: #161614;
+            font-family: "Briem Hand", cursive;
+        }
+    }
+
+    &__bg-website {
+        font-family: "Briem Hand", cursive;
+        color: #e54c21;
+    }
+
+    &__bg-develop {
+        font-family: "Briem Hand", cursive;
+        color: #2465f1;
+    }
+
+    &__bg-app {
+        font-family: "Briem Hand", cursive;
+        color: #f7df1e;
+    }
+}
