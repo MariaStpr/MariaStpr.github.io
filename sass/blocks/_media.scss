@@ -9,12 +9,8 @@
         max-width: 960px;
     }
     .promo {
-        &__wrapper {
-            justify-content: space-around;
-        }
         &__bg {
-            font-size: 50px;
-            line-height: 65px;
+            font-size: 34px;
         }
     }
     .main {
@@ -90,8 +86,7 @@
             font-size: 18px;
         }
         &__bg {
-            font-size: 40px;
-            line-height: 45px;
+            font-size: 30px;
         }
     }
     .main {
@@ -205,16 +200,7 @@
     }
     .promo {
         &__bg {
-            display: none;
-        }
-        &__text {
-            text-align: center;
-            &::before {
-                display: none;
-            }
-            &::after {
-                display: none;
-            }
+            font-size: 24px;
         }
         &__title {
             font-size: 50px;
@@ -331,6 +317,21 @@
             font-size: 20px;
         }
     }
+    .promo {
+        &__bg {
+            font-size: 18px;
+            white-space: normal;
+        }
+        &__title {
+            font-size: 32px;
+        }
+        &__subtitle {
+            font-size: 24px;
+        }
+        &__desc {
+            font-size: 14px;
+        }
+    }
     .title {
         &_main {
             font-size: 28px;
@@ -342,17 +343,6 @@
     .header {
         &__items {
             gap: 10px;
-        }
-    }
-    .promo {
-        &__title {
-            font-size: 35px;
-        }
-        &__subtitle {
-            font-size: 25px;
-        }
-        &__desc {
-            font-size: 18px;
         }
     }
     .main {
