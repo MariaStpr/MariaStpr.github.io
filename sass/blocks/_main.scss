@@ -1,7 +1,6 @@
 .main {
     position: relative;
-    // min-height: 100vh;
-    padding: 60px 15px;
+    padding: 80px 15px;
     overflow: hidden;
     border-bottom: 2px solid #302f31;
     &__wrapper {
@@ -20,15 +19,13 @@
         z-index: 2;
     }
     .intro-main {
-        &__info {
+        &__subtitle {
             position: relative;
             padding-left: 18px;
             z-index: 2;
             font-style: normal;
             font-weight: 700;
-            font-size: 35px;
             line-height: 47px;
-            color: #000000;
             @include before_circle;
             &:before {
                 top: -10%;
@@ -37,13 +34,12 @@
         &__title {
             margin-top: 16px;
             font-weight: 700;
-            font-size: 60px;
             line-height: 74px;
             color: #000000;
         }
         &__web {
             font-weight: 800;
-            font-size: 25px;
+            font-size: clamp(1.2rem, 2.5vw, 2rem);
             line-height: 29px;
             color: #919191;
         }
@@ -52,11 +48,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 288px;
+            max-width: 18rem;
             a {
                 text-decoration: none;
                 font-weight: bold;
-                font-size: 16px;
+                font-size: 1rem;
                 line-height: 150%;
                 color: #000;
             }

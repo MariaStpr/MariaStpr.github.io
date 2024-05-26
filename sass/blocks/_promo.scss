@@ -1,5 +1,6 @@
 .promo {
-    min-height: 100vh;
+    min-height: 40rem;
+    height: 100vh;
     background-color: $bg_color;
     padding: 0 15px;
     border-bottom: 1px solid #000;
@@ -34,25 +35,25 @@
         }
     }
     
-    &__title {
-        font-size: 50px;
+    &__text-title {
+        font-size: clamp(2rem, 3vw, 5rem);
     }
     
-    &__subtitle {
-        font-size: 40px;
+    &__text-subtitle {
+        font-size: clamp(1.5rem, 2vw, 3rem);
         border-bottom: 2px solid $main_color;
         max-width: fit-content;
     }
     
-    &__desc {
-        font-size: 20px;
+    &__text-desc {
+        font-size: clamp(0.9rem, 1.8vw, 2rem);
         margin-top: 10px;
     }
 
     &__bg {
         font-weight: 700;
         font-style: normal;
-        font-size: 36px;
+        font-size: clamp(1.2rem, 2vw, 2rem);
         opacity: 0.7;
         letter-spacing: -1px;
         color: $main_color;
