@@ -37,12 +37,14 @@
     
     &__text-title {
         font-size: clamp(2rem, 3vw, 5rem);
+        font-weight: 700;
     }
     
     &__text-subtitle {
         font-size: clamp(1.5rem, 2vw, 3rem);
         border-bottom: 2px solid $main_color;
         max-width: fit-content;
+        font-weight: 500;
     }
     
     &__text-desc {

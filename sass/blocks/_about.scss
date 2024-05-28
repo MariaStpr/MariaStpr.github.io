@@ -14,7 +14,7 @@
         padding-left: 12px;
         @include before_circle-main;
     }
-    &__title {
+    &__desc-title {
         position: relative;
         &::after {
             content:'';
@@ -37,9 +37,9 @@
         padding-top: 6px;
         flex: 0 0 50%;
     }
-    &__info {
-        font-size: 16px;
-        line-height: 24px;
+    &__desc-info {
+        font-size: 1rem;
+        line-height: 1.5rem;
         color: #000000;
         margin-top: 25px;
     }
@@ -71,11 +71,11 @@
         }
         &__title {
             font-weight: bold;
-            font-size: 16px;
+            font-size: 1rem;
             line-height: 150%;
         }
         &__desc {
-            font-size: 14px;
+            font-size: 0.9rem;
             line-height: 150%;
             margin-top: 10px;
         }

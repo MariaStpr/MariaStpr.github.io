@@ -171,7 +171,6 @@
         max-width: 540px;
     }
     .title {
-        font-size: 30px;
         &_main {
             color: #fff;
         }
@@ -264,12 +263,6 @@
         }
     }
     .title {
-        &_main {
-            font-size: 28px;
-        }
-        &_blocks {
-            font-size: 28px;
-        }
     }
     .header {
         &__items {
@@ -345,6 +338,11 @@
     .price {
         &__wrapper {
             grid-template-columns: repeat(auto-fit, 290px);
+        }
+    }
+    .work {
+        &__wrapper {
+            grid-template-columns: 1fr;
         }
     }
     .contact {

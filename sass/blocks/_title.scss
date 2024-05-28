@@ -1,13 +1,13 @@
 .subtitle {
     font-weight: bold;
-    font-size: clamp(1.6rem, 3vw, 3rem);
+    font-size: clamp(1.5rem, 3vw, 3.5rem);
     line-height: 150%;
     color: #000000;
 }
 .title {
     font-weight: bold;
-    font-size: clamp(2rem, 4vw, 3rem);
     color: #000000;
+    font-size: clamp(1.6rem, 2vw, 3rem);
     &_main {
         line-height: 150%;
     }
