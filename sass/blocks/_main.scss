@@ -2,21 +2,19 @@
     position: relative;
     padding: 80px 15px;
     overflow: hidden;
-    border-bottom: 2px solid #302f31;
+    border-bottom: 2px solid #223f5c;
     &__wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @extend %flex-elem;
     }
     &__bg {
         position: absolute;
         right: 0;
         top: -57px;
-        background-color: #302f31;
+        background-color: #223f5c;
         height: 2000px;
         width: 55%;
         transform: rotate(10deg);
-        z-index: 2;
+        z-index: -1;
     }
     .intro-main {
         &__subtitle {
@@ -44,12 +42,11 @@
             color: #919191;
         }
         &__btns {
+            @extend %flex-elem;
             margin-top: 21px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 18rem;
+            gap: 1rem;
             a {
+                width: clamp(8.5rem, 13vw, 15rem);
                 text-decoration: none;
                 font-weight: bold;
                 font-size: 1rem;

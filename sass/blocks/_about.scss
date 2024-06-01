@@ -2,9 +2,7 @@
     padding: 80px 0 60px 0;
     background-color: #fff;
     &__wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @extend %flex-elem;
         gap: 50px;
         margin-top: 20px;
     }

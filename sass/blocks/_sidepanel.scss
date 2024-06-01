@@ -1,9 +1,7 @@
 .sidepanel {
     position: fixed;
-    display: flex;
+    @extend %flex-elem;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     height: 338px;
     z-index: 3;
     top: 50%;

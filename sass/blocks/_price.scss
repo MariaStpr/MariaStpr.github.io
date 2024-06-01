@@ -49,9 +49,7 @@
             transform: translateY(-50%);
         }
         &-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            @extend %flex-elem;
         }
         &-name {
             font-weight: bold;

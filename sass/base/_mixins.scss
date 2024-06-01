@@ -24,3 +24,9 @@
         z-index: -1;
     }
 }
+
+%flex-elem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

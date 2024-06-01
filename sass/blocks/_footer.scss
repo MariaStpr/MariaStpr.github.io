@@ -29,9 +29,7 @@
     }
     &__desc-social {
         padding: 25px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @extend %flex-elem;
         width: 150px;
         margin: 0 auto;
         a {

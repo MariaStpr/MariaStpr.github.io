@@ -31,7 +31,7 @@
         gap: 30px;
     }
     &__block {
-        border: 1px solid #000000;
+        border: 1px solid #223f5c;
         background-color: #fff;
         border-radius: 10px;
         transition: box-shadow 0.5s ease;
@@ -43,8 +43,7 @@
     &__item {
         padding: 30px 30px 25px 30px;
         &-header {
-            display: flex;
-            align-items: center;
+            @extend %flex-elem;
             justify-content: flex-start;
             gap: 20px;
         }
@@ -79,9 +78,7 @@
         column-gap: 45px;
         row-gap: 30px;
         &-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            @extend %flex-elem;
         }
         &-name {
             position: relative;

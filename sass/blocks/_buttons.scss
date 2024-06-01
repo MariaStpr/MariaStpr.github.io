@@ -1,7 +1,6 @@
 .button {
-    display: flex;
+    @extend %flex-elem;
     justify-content: center;
-    align-items: center;
     width: clamp(10rem, 5vw, 12rem);;
     height: 3rem;
     background: $main_color;
